@@ -1,0 +1,10 @@
+html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Optional: Add some padding for sections */
+  section {
+    scroll-margin-top: 80px; /* Adjust based on your navbar height */
+    padding: 100px 20px;
+    min-height: 100vh;
+  }

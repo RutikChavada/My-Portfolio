@@ -1,0 +1,185 @@
+/* Global Reset and Box Sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body Styling */
+  body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #e5e7fb;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  /* Main Container Styling */
+  .App {
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgb(14, 14, 60);
+    max-width: 100%;
+    margin: 0;
+    scroll-behavior: smooth;
+    /* background-color: white; */
+    padding: 30px;
+    /* box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); */
+  }
+  
+  /* Title Styling */
+  h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    font-weight: 800;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  /* h1::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: #2506ad;
+    margin: 5px auto 0;
+    border-radius: 2px;
+    transition: width 0.3s ease-in-out;
+} */
+  
+  h1 span {
+    color: rgb(227, 198, 10);
+  }
+
+  h1 #work{
+    margin-right: 18px;
+  }
+  
+  /* Grid Container Styling */
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding-top: 20px;
+  }
+  
+  /* Grid Item Styling */
+  .grid-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 250px;
+  }
+  
+  .grid-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  .grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    border-radius: 10px;
+    transition: opacity 0.3s ease;
+  }
+  
+  /* Hover Effect for Images */
+  .grid-item:hover img {
+    opacity: 0.9;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1200px) {
+    .grid-container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (max-width: 900px) {
+    .grid-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .grid-container {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* Overlay Styling */
+/* Overlay Styling */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(25, 24, 24, 0.8);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 2rem;
+}
+
+.bton{
+  width: 80px;
+  height: 30px;
+  margin-top: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: black;
+  background-color: rgb(227, 198, 10);
+  font-weight: 600;
+}
+
+#eye{
+  margin-left: 5px;
+}
+
+/* Dim image on hover */
+.grid-item:hover img {
+  filter: brightness(1.5); /* Dims the image */
+  opacity: 0.7;            /* Adds slight transparency */
+}
+
+/* Show overlay on hover */
+.grid-item:hover .overlay {
+  opacity: 1;
+}
+
+.project-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  /* text-align: center; */
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: black;
+  background: rgb(227, 198, 10); /* Dark background for readability */
+  padding: 10px 0 10px 5px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  z-index: 2; /* Ensures it stays above the image */
+}
+
+#rightarrow{
+  color: black;
+  margin-left: 10px;
+}
